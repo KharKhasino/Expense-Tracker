@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Expense Tracker</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/20.2.43/material.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<script src="https://cdn.syncfusion.com/ej2/20.2.43/dist/ej2.min.js"></script>
+</head>
+<body>
+	<partial name="_sidebar" />
+<nav class="navbar navbar-dark bg-dark sticky-top mb-3">
+	<div class="container-fluid py-2 px-4">
+		<i class="fa-solid fa-magnifying-glass"></i>
+		<div>
+			<i class="fa-solid fa-bell"></i>
+			<i class="fa-solid fa-message"></i>
+			<img class="profile-pic" src="~/Images/ProfilePic.jpg"/>
+		</div>
+	</div>
+
+</nav>
+
+	<div id="mainContent">
+<div class="container">
+		<div class="row justify-content-center">
+			<div class="@(ViewData["isDash"]==null? "col-md-10":"col-md-12")">
+				<main role="main" class="pb-3">
+					@if(ViewData["isDash"]==null){
+							<div class="row d-flex">
+							<div class="col-md-10">
+								<div class="d-flex flex-column mb-5">
+									<div class="d-flex mb-1">
+										<div class="flex-grow-1">
+											<h2 class="fw-bold m-3">@ViewData["PageTitle"]</h2>
+										</div>
+										<div class="mt-3">
+												@if (ViewData["PageActionText"] != null)
+												{
+																		<a class="btn btn-success" href="@ViewData["PageActionUrl"]">
+														@ViewData["PageActionText"]
+																		</a>
+												}
+										</div>
+									</div>
+
+								</div>
+								<div class="m-2">
+										<ejs-breadcrumb id="breadCrumb" 
+									separatorTemplate="@Html.Raw("<span class='fa-solid fa-angle-right'></span>")"></ejs-breadcrumb>
+								</div>
+							</div>
+						</div>
+					}
+					
+					@RenderBody()
+
+				</main>
+
+			</div>
+		</div>
+	</div>
+	<footer class="border-top footer text-muted">
+		<div class="container">
+			&copy; 2022 - Expense Tracker - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+		</div>
+	</footer>
+	</div>
+	
+
+	
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	@await RenderSectionAsync("Scripts", required: false)
+	<!-- Syncfusion Script Manager -->
+	<ejs-scripts></ejs-scripts>
+</body>
+</html>

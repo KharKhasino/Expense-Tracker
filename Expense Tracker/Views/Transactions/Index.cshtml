@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Expense_Tracker.Models.Transaction>
+
+@{
+	ViewData["PageTitle"] = "Transactions";
+	ViewData["PageActionText"] = " + New Transaction";
+	ViewData["PageActionUrl"] = "/Transactions/AddOrEdit";
+}
+
+
+<link href="~/lib/datatables/css/dataTables.bootstrap4.css" rel="stylesheet"/>
+
+<br/>
+
+	<div class="container">
+		<div class="col-md-10">
+			<hr />
+
+		<table id="Transactions" class="table table-striped table-bordered table-dark table-responsive nowrap" cellspacing="0">
+			<thead class="text-center">
+				<tr>
+					<th>ID</th>
+					<th>Category</th>
+					<th>Date</th>
+					<th>Amount</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody class="text-center">
+
+			</tbody>
+		</table>
+		<br />
+
+	</div>
+		</div>
+
+
+
+
+
+
+@section Scripts
+	{
+			<script src="~/lib/datatables/js/jquery.dataTables.js"></script>
+			<script src="~/lib/datatables/js/dataTables.bootstrap4.js"></script>
+			<script src="~/js/TransactionsDataTable.js"></script>
+	}

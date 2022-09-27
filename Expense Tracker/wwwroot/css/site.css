@@ -1,0 +1,180 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    color: #fff;
+    margin-bottom: 60px;
+    background: #0f0c29; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: #CFCDC3;
+    background: linear-gradient(to bottom, #CFCDC3 37%, #CACF2E 83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+table i {
+    color: #fff;
+}
+
+#mainContent {
+    margin-left: 290px;
+}
+
+.custom-R-btn {
+    width: 100%;
+}
+
+    .custom-R-btn .e-btn {
+        width: 50%;
+    }
+
+custom-R-btn label.e-btn {
+    box-shadow: none !important;
+    border: 1px solid #fff;
+}
+/* NavBar */
+nav.navbar i {
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+    nav.navbar i:hover, nav.navbar img:hover {
+        cursor: pointer;
+        background-color: #48545f14;
+        transform: scale(1.05) translateZ(0px);
+    }
+
+.profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+/*Btns*/
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.no-a-decor, .no-a-decor:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Widgets */
+.Widget {
+    background-color: rgba(188, 188, 188, .18);
+    border-radius: 1rem;
+}
+
+    .Widget.summary > div:first-child {
+        background-color: #222b33;
+        padding: 1rem;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+
+        .Widget.summary > div:first-child i {
+            font-weight: bold;
+        }
+
+    .Widget.income > div:first-child {
+        color: #65da41;
+    }
+
+    .Widget.expense > div:first-child {
+        color: #ff4e48;
+    }
+
+    .Widget.balance > div:first-child {
+        color: #2aa1ff;
+    }
+
+    .Widget.chart {
+        padding: 5px;
+    }
+
+
+/* BreadCrumb */
+.e-breadcrumb a, .e-breadcrumb a:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.e-anchor-wrap {
+    color: tomato;
+}
+
+
+/* Syncfusion */
+#ddlCategory, #amount, #note, #date, #textarea_42 {
+    color: black;
+    margin-left: 0.5rem;
+}
+
+#label_date, #label_ddlCategory, #label_amount, #label_textarea_42 {
+    font-size: large !important;
+    line-height: 1rem;
+    color: darkkhaki;
+}
+
+/*SideBar*/
+#sidebar {
+    background-color: #12161d;
+    border-right: 1px dashed rgba(75,82,85,0.24);
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+    #sidebar .e-menu-wrapper {
+        width: 100%;
+        background-color: inherit;
+    }
+
+span.e-menu-icon, span.e-icons, li.e-menu-item {
+    color: #fff !important;
+}
+
+li.e-focused, li.e-selected {
+    background-color: #12161d !important;
+}
+div.e-menu-wrapper.e-selected { 
+    background-color: #12161d !important;
+}
+
+.profile-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(72, 84, 95, 0.12);
+    padding: 16px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+    .profile-wrapper .titles {
+        line-height: 1;
+    }
